@@ -1,21 +1,28 @@
-# WpfBlazorAppTemplate
-WPF Blazorアプリを作成するためのテンプレート
+# WPFBlazorAppTemplate
+WPF Blazor アプリ を作成するためのテンプレート
 
 ## 使用法
 
 ### テンプレートの取得
-
-`https://github.com/kznagamori/WpfBlazorAppTemplate.git`をダウンロードして、任意のディレクトリに展開します。
+[WPFBlazorApp.nupkg](https://github.com/kznagamori/WPFBlazorAppTemplate/releases/download/v1.0.0/kznagamori.WPFBlazorApp.1.0.0.nupkg)
+をダウンロードします。
 
 ### テンプレートのインストール
+ダウンロードしたnugetパッケージをインストールします。
+```
+dotnet new install kznagamori.WPFBlazorApp.1.0.0.nupkg
+```
 
-`dotnet new install .\WpfBlazorAppTemplate`
-
-### WPF Blazorアプリプロジェクトの作成
-
-`dotnet new wpf-blazor -n <プロジェクト名>`
-
+### WPF Blazor アプリプロジェクトの作成
+```
+dotnet new wpf-blazor.app -n <プロジェクト名>
+```
 **例:** `dotnet new wpf-blazor -n MyWpfBlazor`
+
+### テンプレートのアンインストール
+```
+dotnet new uninstall kznagamori.WPFBlazorApp
+```
 
 ### ターゲット
 
@@ -31,5 +38,10 @@ dotnet build
 
 ```
 dotnet publish -c Release
+```
+
+### kznagamori.WPFBlazorApp.X.X.X.nupkgの作成
+```
+nuget pack .\WPFBlazorAppTemplate.nuspec
 ```
 
